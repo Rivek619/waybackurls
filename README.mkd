@@ -14,6 +14,17 @@ Install:
 ▶ go install github.com/tomnomnom/waybackurls@latest
 ```
 
+Note: 
+
+The go install command installs Go executables in the directory named by the GOBIN environment variable. GOBIN defaults to $GOPATH/bin, or ~/go/bin if the GOPATH environment variable is not set.
+Tip: You can see all Go variables by running go env
+
+For convenience, add the bin subdirectory to PATH:
+
+```
+▶  export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+```
+
 ## Credit
 
 This tool was inspired by @mhmdiaa's [waybackurls.py](https://gist.github.com/mhmdiaa/adf6bff70142e5091792841d4b372050) script.
